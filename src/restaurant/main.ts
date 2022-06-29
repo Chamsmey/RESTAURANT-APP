@@ -14,15 +14,15 @@ let narongRTK = new Restaurant("narongKaka", "11,street, Siem Reap");
 let dining = new Dining("dining room");
 // tables
 
-let table1 = new Table(1);
-table1.chairs = 5;
-let table2 = new Table(1);
-table2.chairs = 5;
-let table3 = new Table(1);
-table3.chairs = 5;
+// let table1 = new Table(1);
+// table1.chairs = 5;
+// let table2 = new Table(1);
+// table2.chairs = 5;
+// let table3 = new Table(1);
+// table3.chairs = 5;
 
-// add tables
-dining.addTable(table1, table2, table3);
+// // add tables
+// dining.addTable(table1, table2, table3);
 
 // menu
 
@@ -35,5 +35,5 @@ let amok = new Food('amok', 200);
 let menu = new Menu();
 menu.addFood(chaSagKor, kkor, amok);
 
-console.log(menu.getListFoods()[1]);
+// console.log(menu.getListFoods()[1]);
 

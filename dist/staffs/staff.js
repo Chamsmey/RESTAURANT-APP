@@ -15,24 +15,13 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Manager = void 0;
-var staff_1 = require("./staff");
-var Manager = /** @class */ (function (_super) {
-    __extends(Manager, _super);
-    function Manager(firstName, lastName, gender, address, workDay) {
-        var _this = _super.call(this, firstName, lastName, gender) || this;
-        _this.workDay = workDay;
-        _this.staffs = [];
-        return _this;
+exports.Staff = void 0;
+var person_1 = require("./person");
+var Staff = /** @class */ (function (_super) {
+    __extends(Staff, _super);
+    function Staff(firstName, lastName, gender) {
+        return _super.call(this, firstName, lastName) || this;
     }
-    // the function to maltiple the salary-----
-    Manager.prototype.getSalary = function () {
-        return this.workDay * 12;
-    };
-    // add all staffs to the manager --------------
-    Manager.prototype.addStaff = function (staff) {
-        this.staffs.push(staff);
-    };
-    return Manager;
-}(staff_1.Staff));
-exports.Manager = Manager;
+    return Staff;
+}(person_1.Person));
+exports.Staff = Staff;

@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+<<<<<<< HEAD
 var restaurant_1 = require("./restaurant");
 var dining_1 = require("./room/dining/dining");
 var food_1 = require("./room/dining/food");
@@ -28,3 +29,15 @@ var amok = new food_1.Food('amok', 200, food_1.FoodType.DESSERT);
 var menu = new menu_1.Menu();
 menu.addFood(chaSagKor, kkor, amok);
 console.log(menu.getListFoods()[1]);
+=======
+var cashier_1 = require("./staffs/cashier");
+var chef_1 = require("./staffs/chef");
+var gender_1 = require("./staffs/gender");
+var manager_1 = require("./staffs/manager");
+var waiter_1 = require("./staffs/waiter");
+var cashier1 = new cashier_1.Cashier('Gumer', 'teacher', gender_1.Gender.Male, 'phom penh', 1);
+var chef1 = new chef_1.Chef('Narong', 'Bunyon', gender_1.Gender.Male, 'phon penh', 1);
+var manger1 = new manager_1.Manager('Hung', 'kong', gender_1.Gender.Femal, 'phone penh', 1);
+var waiter1 = new waiter_1.Waiter('Bun', 'vong', gender_1.Gender.Femal, 'phom penh', 1);
+console.log(cashier1);
+>>>>>>> f8a33b7368c2c7e8f9f25e707262690430f99e0a

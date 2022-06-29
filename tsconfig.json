@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
-        "module": "commonJS"
+      "outDir": "dist",
+      "strict": true,
+      "module": "commonJS",
+      "forceConsistentCasingInFileNames": true,
     },
 
     "include": ["src/**/*"],

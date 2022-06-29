@@ -1,8 +1,10 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
-        "module": "commonJS"
+      "outDir": "dist",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
     },
-
-    "include": ["src/**/*", "src/restaurant"],
-}
+    "include": [
+      "src/**/*"
+  ]
+  }

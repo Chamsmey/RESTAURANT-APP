@@ -15,16 +15,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Staff = void 0;
-var person_1 = require("./person");
-var Staff = /** @class */ (function (_super) {
-    __extends(Staff, _super);
-    function Staff(name, gender, address) {
-        var _this = _super.call(this, name, gender) || this;
-        _this.name = name;
-        _this.address = address;
+exports.Drink = void 0;
+var item_1 = require("./item");
+var itemType_1 = require("./itemType");
+var Drink = /** @class */ (function (_super) {
+    __extends(Drink, _super);
+    function Drink(name, price, amountOfDrinks) {
+        var _this = _super.call(this, itemType_1.ItemType.DRINK, name, price) || this;
+        _this.amountOfDrinks = amountOfDrinks;
         return _this;
     }
-    return Staff;
-}(person_1.Person));
-exports.Staff = Staff;
+    return Drink;
+}(item_1.Item));
+exports.Drink = Drink;

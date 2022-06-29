@@ -2,9 +2,9 @@
 exports.__esModule = true;
 exports.Person = void 0;
 var Person = /** @class */ (function () {
-    function Person(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    function Person(name, gender) {
+        this.name = name;
+        this.gender = gender;
     }
     return Person;
 }());

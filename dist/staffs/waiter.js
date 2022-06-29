@@ -19,16 +19,11 @@ exports.Waiter = void 0;
 var staff_1 = require("./staff");
 var Waiter = /** @class */ (function (_super) {
     __extends(Waiter, _super);
-    function Waiter(firstName, lastName, gender, address, workDay) {
-        var _this = _super.call(this, firstName, lastName, gender) || this;
-        _this.address = address;
-        _this.workDay = workDay;
+    function Waiter(name, gender, address) {
+        var _this = _super.call(this, name, gender, address) || this;
+        _this.name = name;
         return _this;
     }
-    // the function to maltiple the salary-----
-    Waiter.prototype.getSalary = function () {
-        return this.workDay * 5;
-    };
     return Waiter;
 }(staff_1.Staff));
 exports.Waiter = Waiter;

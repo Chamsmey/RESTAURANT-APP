@@ -15,16 +15,16 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Staff = void 0;
+exports.Customer = void 0;
 var person_1 = require("./person");
-var Staff = /** @class */ (function (_super) {
-    __extends(Staff, _super);
-    function Staff(name, gender, address) {
+var Customer = /** @class */ (function (_super) {
+    __extends(Customer, _super);
+    function Customer(name, gender, address) {
         var _this = _super.call(this, name, gender) || this;
         _this.name = name;
         _this.address = address;
         return _this;
     }
-    return Staff;
+    return Customer;
 }(person_1.Person));
-exports.Staff = Staff;
+exports.Customer = Customer;

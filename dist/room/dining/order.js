@@ -2,18 +2,19 @@
 exports.__esModule = true;
 exports.Order = void 0;
 var Order = /** @class */ (function () {
-    function Order(orderNumber, TableOrder, food) {
-        this.orderNumber = orderNumber;
-        this.TableOrder = TableOrder;
-        this.foods = [];
-        this.foods = this.foods.concat(food);
+    function Order(tableId, orderDate, customerName, items) {
+        this.tableId = tableId;
+        this.orderDate = orderDate;
+        this.customerName = customerName;
+        this.items = [];
+        for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
+            var i = items_1[_i];
+            var item = i;
+            this.items.push(item);
+        }
     }
-    /**
-     * @return foods
-     * @param food
-     */
-    Order.prototype.addFood = function (food) {
-        this.foods.push(food);
+    Order.prototype.getCustomer = function () {
+        return this.customerName;
     };
     return Order;
 }());

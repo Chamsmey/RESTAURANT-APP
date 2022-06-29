@@ -5,11 +5,11 @@ var Restaurant = /** @class */ (function () {
     function Restaurant(name, address) {
         this.name = name;
         this.address = address;
+        this.staffs = [];
+        this.room = [];
     }
-    Restaurant.prototype.addRoom = function (room) { };
-    Restaurant.prototype.addStaff = function (staff) { };
-    Restaurant.prototype.getRoom = function (room) { };
-    Restaurant.prototype.getStaff = function (room) { };
+    Restaurant.prototype.addRoom = function (room) { this.room.push(room); };
+    Restaurant.prototype.addStaff = function (staff) { this.staffs.push(staff); };
     return Restaurant;
 }());
 exports.Restaurant = Restaurant;

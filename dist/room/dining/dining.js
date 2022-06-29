@@ -17,13 +17,20 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 exports.Dining = void 0;
 var room_1 = require("../room");
+var order_1 = require("./order");
 var Dining = /** @class */ (function (_super) {
     __extends(Dining, _super);
-    function Dining(name) {
+    function Dining(name, cashier) {
         var _this = _super.call(this, name) || this;
+        _this.cashier = cashier;
         _this.tables = [];
+        _this.menu = [];
+        _this.orders = [];
         return _this;
     }
+    Dining.prototype.setCashier = function (cashier) {
+        this.cashier = cashier;
+    };
     Dining.prototype.addTable = function () {
         var _a;
         var table = [];
@@ -31,6 +38,34 @@ var Dining = /** @class */ (function (_super) {
             table[_i] = arguments[_i];
         }
         this.tables = (_a = this.tables).concat.apply(_a, table);
+    };
+    Dining.prototype.customerOrder = function (customerName, tableId, orderDate) {
+        var items = [];
+        for (var _i = 3; _i < arguments.length; _i++) {
+            items[_i - 3] = arguments[_i];
+        }
+        this.orders.push(new order_1.Order(tableId, orderDate, customerName, items));
+    };
+    Dining.prototype.addFood = function (other) {
+        var item = other;
+        this.menu.push(item);
+    };
+    Dining.prototype.getMenu = function () {
+        return this.menu;
+    };
+    Dining.prototype.getTable = function () {
+        return this.tables;
+    };
+    Dining.prototype.getOrder = function () {
+        return this.orders;
+    };
+    Dining.prototype.getItemBy = function (name) {
+        for (var _i = 0, _a = this.orders; _i < _a.length; _i++) {
+            var order = _a[_i];
+            if (order.getCustomer() === name) {
+                return order;
+            }
+        }
     };
     return Dining;
 }(room_1.Room));

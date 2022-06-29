@@ -19,16 +19,9 @@ exports.Cashier = void 0;
 var staff_1 = require("./staff");
 var Cashier = /** @class */ (function (_super) {
     __extends(Cashier, _super);
-    function Cashier(firstName, lastName, gender, address, workDay) {
-        var _this = _super.call(this, firstName, lastName, gender) || this;
-        _this.address = address;
-        _this.workDay = workDay;
-        return _this;
+    function Cashier() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    // the function to maltiple the salary-----
-    Cashier.prototype.getSalary = function () {
-        return this.workDay * 5;
-    };
     return Cashier;
 }(staff_1.Staff));
 exports.Cashier = Cashier;

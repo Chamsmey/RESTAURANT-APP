@@ -25,6 +25,7 @@ var Drink = /** @class */ (function (_super) {
         _this.amountOfDrinks = amountOfDrinks;
         return _this;
     }
+    Drink.prototype.getPrice = function () { return this.price; };
     return Drink;
 }(item_1.Item));
 exports.Drink = Drink;

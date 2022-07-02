@@ -19,9 +19,16 @@ export class Order {
       this.items.push(item);
     }
   }
-  
+
   getCustomer(){
     return this.customerName;
+  }
+  getTotal() {
+    let total: number = 0;
+    for (let item of this.items) {
+      total += item.getPrice();
+    }
+    return total;
   }
   /**
    * add item to order

@@ -42,11 +42,21 @@ export class Dining extends Room {
     getOrder() {
         return this.orders;
     }
-    getItemBy(name:string){
+  getItemBy(name: string): Order[]{
+      let orders : Order[] = [];
         for (let order of this.orders) {
-            if (order.getCustomer() === name) {
-                 return order;
+          if (order.getCustomer() === name) {
+            orders.push(order);
             }
-        }
-      }
+          }
+          return orders;
+  }
+  getTotalPrice(name: string) {
+    let orders = this.getItemBy(name);
+    let total: number = 0;
+    for (let order of orders) {
+      total += order.getTotal();
+    }
+    return total;
+  }
 }

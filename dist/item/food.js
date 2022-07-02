@@ -26,6 +26,7 @@ var Food = /** @class */ (function (_super) {
     function Food(name, price) {
         return _super.call(this, itemType_1.ItemType.FOOD, name, price) || this;
     }
+    Food.prototype.getPrice = function () { return this.price; };
     return Food;
 }(item_1.Item));
 exports.Food = Food;

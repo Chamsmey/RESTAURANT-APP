@@ -4,8 +4,8 @@ import { Meat } from "./meat";
 import { Vigatable } from "./vigatable";
 
 class Kitchen extends Room {
-  vigatable: Vigatable[];
-  meats: Meat[];
+  private vigatable: Vigatable[]=[];
+  private meats: Meat[]= [];
   constructor(name: string) {
     super(name);
   }

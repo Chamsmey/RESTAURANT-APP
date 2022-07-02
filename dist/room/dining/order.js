@@ -16,6 +16,14 @@ var Order = /** @class */ (function () {
     Order.prototype.getCustomer = function () {
         return this.customerName;
     };
+    Order.prototype.getTotal = function () {
+        var total = 0;
+        for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
+            var item = _a[_i];
+            total += item.getPrice();
+        }
+        return total;
+    };
     return Order;
 }());
 exports.Order = Order;

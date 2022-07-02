@@ -60,12 +60,23 @@ var Dining = /** @class */ (function (_super) {
         return this.orders;
     };
     Dining.prototype.getItemBy = function (name) {
+        var orders = [];
         for (var _i = 0, _a = this.orders; _i < _a.length; _i++) {
             var order = _a[_i];
             if (order.getCustomer() === name) {
-                return order;
+                orders.push(order);
             }
         }
+        return orders;
+    };
+    Dining.prototype.avoid = function (name) {
+        var orders = this.getItemBy(name);
+        var total = 0;
+        for (var _i = 0, orders_1 = orders; _i < orders_1.length; _i++) {
+            var order = orders_1[_i];
+            total += order.getTotal();
+        }
+        return total;
     };
     return Dining;
 }(room_1.Room));

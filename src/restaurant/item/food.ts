@@ -8,6 +8,7 @@ export class Food extends Item {
   constructor(name: string, price: number) {
     super(ItemType.FOOD, name, price);
   }
+  getPrice(): number { return this.price;}
 }
 /**
  * food type

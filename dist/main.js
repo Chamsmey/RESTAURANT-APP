@@ -39,11 +39,13 @@ var chaSagKor = new food_1.Food('cha Sag Kor', 200);
 var kkor = new food_1.Food('kkor', 200);
 var amok = new food_1.Food('amok', 200);
 // order items to
-dining.customerOrder("cham psn", 1, "29,june,2022", kkor, amok);
 dining.addFood(chaSagKor);
 dining.addFood(amok);
 dining.addFood(kkor);
+dining.customerOrder("cham psn", 1, "29,june,2022", kkor, amok);
+dining.customerOrder("cham psn", 1, "29,june,2022", chaSagKor);
 // console.log(narongRTK);
 // console.log(dining.getMenu());
 // console.log(dining.getTable());
 console.log(dining.getItemBy("cham psn"));
+console.log(dining.avoid("cham psn"));

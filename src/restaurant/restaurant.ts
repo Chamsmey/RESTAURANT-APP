@@ -3,12 +3,12 @@ import { Staff } from "./staffs/staff";
 
 export class Restaurant{
     private staffs: Staff[]=[];
-    private room: Room[] = [];
+    private rooms: Room[] = [];
     constructor(private name: string, private address: string) { }
-    addRoom(room: Room) { this.room.push(room); }
+    addRoom(room: Room) { this.rooms.push(room); }
     addStaff(staff: Staff) {this.staffs.push(staff); }
-    // getRoom(room: any) { }
-    // getStaff(room: any) { }
+    getRoom() {return this.rooms}
+    getStaff() { return this.staffs}
  
 }
 
